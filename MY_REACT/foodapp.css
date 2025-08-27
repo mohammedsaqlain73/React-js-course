@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  /*all professional does it bcz at first the html add extra margin and padding*/
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /*it makes 1rem=10px helps in resposive webpage creation*/
+
+}
+
+
+
+p,
+li,
+a,
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  color: var(--para-color);
+
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*theme*/
+:root {
+  /*css variable*/
+  --main-color: #0062ff;
+  --supporting-color: #ebf3fe;
+  --bg-color: #ffffff;
+  --font-color: #424242;
+  --heading-color: #000a19;
+  --hero-heading-color: #003b99;
+  --para-color: #504e4d;
+  --btn-hover-bg-color: #003b99;
+  --btn-box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+  --footer-bg-color: #040d12;
+}
+
+.section-navbar {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.05)0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+
+
+.section-navbar .navbar ul {
+  display: flex;
+  gap: 2.5rem;
+  padding: 20px;
+
+  & li a {
+    color: rgb(169, 0, 0);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 530;
+    display: inline-block;
+    /*I make it inline as it can be modify easily*/
+    position: relative;
+
+    &::after {
+      /*to add  content after an element*/
+      content: '';
+      position: absolute;
+      bottom: -0.3rem;
+      left: 0;
+      border-bottom: 0.2rem solid rgb(11, 11, 11);
+      /*border for transition only at bottom*/
+      width: 0;
+      /*initially width of blue border at bottom of each is 0 when hover increase to 100 in lateer section*/
+      transition: all 0.3s linear;
+      /*slow down the hover animation*/
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+    }
+
+  }
+
+  & li a:hover::after {
+    /*hover effect on the li's anchor tag in after*/
+    width: 100%;
+  }
+}
+
+.section-navbar .navbar {
+  margin-left: 5px;
+}
+
+.res-cart {
+  border-radius: 8px;
+  width: 220px;
+  height: 320px;
+  margin-left: 10px;
+  background-color: var(--supporting-color);
+  padding: 6px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+.res-cart:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+
+.search {
+  padding: 20px;
+  font-size: 20px;
+}
+
+.res-logo {
+  width: 210px;
+  height: 170px;
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.filter-btn {
+  margin: 20px;
+  font-size: 15px;
+  background-color: black;
+  border-radius: 10px;
+  color: rgb(206, 225, 28);
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(252, 4, 4, 0.1), 0 6px 20px rgba(225, 3, 3, 0.19);
+  }
+}
+
+.log-btn {
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgb(211, 229, 244);
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.user-card {
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+.status {
+  font-size: 20px;
+}
+
+.label {
+  position: absolute;
+  background-color: #000a19;
+  padding: 5px;
+  margin: 2px;
+  color: #ebf3fe;
+  border-radius: 5px;
+}

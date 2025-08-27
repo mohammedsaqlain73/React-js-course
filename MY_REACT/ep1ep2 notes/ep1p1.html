@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>basic html program</title>
+</head>
+<body>
+  <!--using html to build hello world-->
+<h1>hello world!</h1>
+<!-- using js to create hello world-->
+ <div id="root"></div>
+ <script>
+//create a h1 tag
+const heading = document.createElement("h1");
+//inside the h1 i need hello world
+heading.innerHTML="hello world by javascript !";
+//i will put it this h1 witrh hello world in rooot so i need its reference
+const root = document.getElementById("root");
+root.appendChild(heading);
+ </script>
+</body>
+</html>
